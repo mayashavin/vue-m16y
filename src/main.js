@@ -1,5 +1,15 @@
 import Vue from 'vue'
+import './plugins/vuetify'
 import App from './App.vue'
+import M16y from 'vue-accessibility-widget';
+
+Vue.use(M16y, {
+  plugins: {
+    Cloudinary: {
+      cloudname: 'cloudinary',
+    }
+  }
+});
 
 Vue.config.productionTip = false
 

@@ -1,4 +1,4 @@
-# vue-accessibility-demo
+# vue-accessibility-widget
 [![contributors welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
 Vue plugin for a11y which enables media accessibility (m16y) customized controls widget for visually impaired user support in your app.
@@ -18,7 +18,7 @@ Allow user to change the brightness of the whole app.
 
 Default: `100%`
 
-# Contrast control
+### Contrast control
 Allow user to change the contrsat of the whole app.
 
 Default: `100%`
@@ -38,7 +38,7 @@ Default: `false`
 ### Grayscale mode
 Allow user to switch the app to grayscale color theme.
 
-## Installing
+## Installing 🚀
 Direct install from npm `vue-accessibility-widget`
 
 ```
@@ -51,7 +51,7 @@ Or `yarn`
 $ yarn add vue-accessibility-widget
 ```
 
-### Getting started
+### Getting started 👩‍💻
 - Add the plugin to Vue using
 
 ```
@@ -83,14 +83,11 @@ And in `App.vue`
 
 And it will just work! 👍
 
-### Docs
+### Docs ✍️
 Coming soon
 
-### Issues
-Any bug or issue, please submit at [Issues](https://github.com/mayashavin/vue-accessibility-demo/issues)
+### Issues 😱
+Any bug 🐛 or issue ❓, just drop me a line at [Issues](https://github.com/mayashavin/vue-accessibility-demo/issues)
 
 ### License
 MIT
-
-### Keywords
-a11y, m16y, accessibility, plugin, vue, widget, media, accessibility, vueJS

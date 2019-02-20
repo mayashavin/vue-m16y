@@ -1,6 +1,6 @@
 import AccessibilityControls from './components/AccessibilityControls.vue';
 import ImageWrapper from './components/ImageWrapper.vue';
-
+import Cloudinary from '../../cloudinary_vue';
 /* eslint-disable*/
 
 const defaults = {
@@ -48,7 +48,7 @@ const registerComponents = (components) => {
 /**
  * Steps to do:
  * 1. Check if there is more than one Vue instance installed
- * 2. Check if library installed - ✅
+ * 2. Remove vuetify!!!!
  * 3. Options - what accessibility controls should be included - ✅(partial)
  * 4. Element to attached
  * 5. Separate CSS
@@ -97,6 +97,12 @@ const M16yPlugin = {
     root.$on('nightMode', data.switchNightMode);
     root.$on('colorBlind', data.supportColorBlind);
 
+    if (options.plugins.Cloudinary) {
+      Vue.use(Cloudinary, {
+        ...options.plugins.Cloudinary,
+      });
+    }
+
     // Only register external components
     const registeredComps = registerComponents(options.components);
 
@@ -115,7 +121,7 @@ const M16yPlugin = {
 
     Vue.prototype.$m16y = root;
   },
-  version: '0.0.1',
+  version: '0.0.6',
 };
 
 let GlobalVue = null;

@@ -1,18 +1,18 @@
 {
   "name": "vue-accessibility-widget",
-  "version": "0.0.3",
+  "version": "0.0.8",
   "description": "M16y - Media Accessibility plugin",
   "author": "Maya Shavin <maya@cloudinary.com>",
   "scripts": {
     "build": "rimraf ./dist && webpack --config ./build/webpack.config.js"
   },
-  "main": "dist/plugins/vue-m16y-plugin.js",
+  "main": "dist/vue-m16y-plugin.js",
   "license": "MIT",
   "dependencies": {
     "material-design-icons-iconfont": "^3.0.3",
     "roboto-fontface": "*",
     "terser-webpack-plugin": "^1.2.2",
-    "vue": "^2.5.2"
+    "vue": "^2.5.2",
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
