@@ -67,7 +67,7 @@ Vue.use(M16yPlugin);
 </div>
 ```
 
-** Or you can customize the attribute name by **
+**Or you can customize the attribute name by**
 ```
 Vue.use(M16yPlugin, {
   directiveName: 'v-access-ctrls',
