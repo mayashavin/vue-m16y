@@ -137,13 +137,13 @@ export default {
       background: #00897B;
       color: white;
       display:flex;
-      padding: 0.5rem;
+      padding: 5px 15px;
       align-items: center;
       border-radius: 30px;
       justify-content: center;
       text-transform: uppercase;
       border: 1px solid transparent;
-      height: 36px;
+      min-height: 36px;
       flex: 0 0 auto;
       font-size: 14px;
       font-weight: 500;
@@ -161,6 +161,7 @@ export default {
 
       .m-access-ctrls-btn__content {
         margin-right: 5px;
+        line-height: 24px;
       }
     }
 
