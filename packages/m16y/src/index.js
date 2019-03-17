@@ -1,6 +1,7 @@
+import 'material-design-icons';
 import AccessibilityControls from './components/AccessibilityControls.vue';
 import ImageWrapper from './components/ImageWrapper.vue';
-import Cloudinary from '../../cloudinary_vue';
+import Cloudinary from 'cloudinary-vue';
 /* eslint-disable*/
 
 const defaults = {
@@ -84,9 +85,6 @@ const M16yPlugin = {
     }
 
     const root = new Vue({
-      data: {
-        ...data,
-      },
       data: data,
       render: createElement => createElement(AccessibilityControls),
     });

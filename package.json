@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "vue": "^2.6.6",
-    "vue-accessibility-widget": "0.0.8",
+    "vue-accessibility-widget": "0.0.23",
     "vuetify": "^1.5.2"
   },
   "devDependencies": {

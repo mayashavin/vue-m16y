@@ -16,6 +16,7 @@
     </v-toolbar>
 
     <v-content>
+      <image-wrapper :img="image"/>
       <HelloWorld/>
     </v-content>
   </v-app>
@@ -31,6 +32,14 @@ export default {
   },
   data () {
     return {
+      image: {
+        publicId: 'VueJS_Amsterdam_2018/20-12-2D-pie',
+        alt: 'Pie chart',
+        crop: 'fill',
+        gravity: 'center',
+        width: 200,
+        aspectRatio: '1:1',
+      }
       //
     }
   }

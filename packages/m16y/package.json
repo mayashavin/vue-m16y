@@ -1,6 +1,6 @@
 {
   "name": "vue-accessibility-widget",
-  "version": "0.0.8",
+  "version": "0.0.23",
   "description": "M16y - Media Accessibility plugin",
   "author": "Maya Shavin <maya@cloudinary.com>",
   "scripts": {
@@ -9,10 +9,12 @@
   "main": "dist/vue-m16y-plugin.js",
   "license": "MIT",
   "dependencies": {
+    "cloudinary-vue": "https://res.cloudinary.com/sdk-test/raw/upload/v1551869972/cloudinary-vue-0.9.0-rc.1.tgz",
+    "material-design-icons": "^3.0.1",
     "material-design-icons-iconfont": "^3.0.3",
     "roboto-fontface": "*",
     "terser-webpack-plugin": "^1.2.2",
-    "vue": "^2.5.2",
+    "vue": "^2.5.2"
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",

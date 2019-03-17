@@ -1,45 +1,49 @@
 <template>
   <div class="access-ctrls-wrapper">
-    <v-btn :color="accessBtnColor" round @click="toggleAccessibilityCtrlsSection" class="white--text">
+    <button @click="toggleAccessibilityCtrlsSection" class="m-access-ctrls-btn">
+      <div class="m-access-ctrls-btn__content">{{accessBtn}}</div>
+      <i class="material-icons">
+        accessibility
+      </i>
+    </button>
+    <!-- <v-btn :color="accessBtnColor" round @click="toggleAccessibilityCtrlsSection" class="white--text">
       {{accessBtn}}
       <v-icon right medium>{{accessBtn}}</v-icon>
-    </v-btn>
+    </v-btn> -->
     <transition name="component-fade" mode="out-in">
       <div class="section-container pa1 d--grid" v-show="this.openAccessControlSection">
-        <v-slider
-          :label="nightMode ? 'Darkness' : 'Brightness'"
-          v-model="brightness"
-          max="200"
-          @change="modifyBrightness"
-        />
-        <v-slider
-          label="Contrast  "
-          @change="modifyContrast"
-          v-model="contrast"
-          max="200"
-        />
-        <v-switch
-          label="Dark Mode"
-          @change="switchScreenMode"
-          color="primary"
-          v-model="nightMode"
-        />
-        <v-switch
-          label="Color Blind Mode"
-          @change="supportColorblind"
-          color="primary"
-          v-model="colorBlind"
-        />
-        <v-switch
-          label="Grayscale Mode"
-          @change="supportGrayscale"
-          color="primary"
-          v-model="grayscale"
-        />
-        <v-btn @click="reset" dark color="teal darken-1" class="justify-self-center">
-          Reset
-          <v-icon right medium>format_color_reset</v-icon>
-        </v-btn>
+        <!-- TODO: turn it to slider -->
+        <div class="slider-container">
+          <label for="light-sensitivity-control">{{nightMode ? 'Darkness' : 'Brightness'}}</label>
+          <input type="range" min="1" max="200" 
+            @change="modifyBrightness"
+            v-model="brightness" class="slider" id="light-sensitivity-control">
+        </div>
+        <div class="slider-container">
+          <label for="contrast-sensitivity-control">Contrast</label>
+          <input type="range" min="1" max="200" 
+            @change="modifyContrast"
+            v-model="contrast" class="slider" id="contrast-sensitivity-control">
+        </div>
+        <div class="switcher-container">
+          <label for="nightMode-control">Dark Mode</label>
+          <input type="checkbox"
+            @change="switchScreenMode"
+            v-model="nightMode" class="switcher" id="nightMode-control">
+        </div>
+        <div class="switcher-container">
+          <label for="nightMode-control">Color Blind Mode</label>
+          <input type="checkbox"
+            @change="supportColorblind"
+            v-model="colorBlind" class="switcher" id="nightMode-control">
+        </div>
+        <div class="switcher-container">
+          <label for="nightMode-control">Grayscale Mode</label>
+          <input type="checkbox"
+            @change="supportGrayscale"
+            v-model="grayscale" class="switcher" id="nightMode-control">
+        </div>
+        <button @click="reset" class="m-access-ctrls__reset-btn">Reset</button>
       </div>
     </transition>
   </div>  
@@ -127,14 +131,72 @@ export default {
     right: 0;
     z-index: 2;
     top: 0;
-    background: white;
+    // background: white; //should only relevant when it's opened.
+
+    .m-access-ctrls-btn {
+      background: #00897B;
+      color: white;
+      display:flex;
+      padding: 0.5rem;
+      align-items: center;
+      border-radius: 30px;
+      justify-content: center;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      height: 36px;
+      flex: 0 0 auto;
+      font-size: 14px;
+      font-weight: 500;
+      margin: 6px 8px;
+      min-width: 88px;
+      outline: 0;
+      text-decoration: none;
+      transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1), color 1ms;
+      position: relative;
+      vertical-align: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      .m-access-ctrls-btn__content {
+        margin-right: 5px;
+      }
+    }
+
+    .m-access-ctrls__reset-btn {
+      background: #00897B;
+      color: white;
+      display:flex;
+      padding: 3px 5px;
+      align-items: center;
+      border-radius: 3px;
+      justify-content: center;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      flex: 0 0 auto;
+      font-size: 14px;
+      font-weight: 500;
+      margin: auto;
+      outline: 0;
+      text-decoration: none;
+      transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1), color 1ms;
+      position: relative;
+      vertical-align: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
   }
 
   .section-container {
     border: 1px solid #E0E0E0;
-    margin-right: 1rem;
+    margin-right: 8px;
     width: 300px;
     box-shadow: 2px 2px 5px -2px #E0E0E0;
+    background: white;
+    padding: 8px;
   }
 
   .component-fade-enter-active, .component-fade-leave-active {

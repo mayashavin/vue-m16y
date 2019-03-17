@@ -1,5 +1,5 @@
 <template>
-    <CLDImage v-bind="tranformedImg"/>
+    <cld-image v-bind="tranformedImg"/>
 </template>
 <script>
 export default {
