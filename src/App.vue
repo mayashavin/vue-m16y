@@ -1,25 +1,30 @@
 <template>
   <v-app v-m16y-ctrls>
     <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>M16Y</span>
-        <span class="font-weight-light">Media Accessibility Project</span>
+      <v-toolbar-title class="headline">
+        <span>M16Y - Media Accessibility Project</span>
       </v-toolbar-title>
     </v-toolbar>
     <v-content>
-      <image-wrapper :img="image"/>
-      <HelloWorld/>
+      <main-comp/>
     </v-content>
+    <v-footer
+      dark
+      height="auto"
+      class="d-flex"
+    >
+      <div class="white--text justify-center text-md-center">&copy; {{ new Date().getFullYear() }} - M16Y Project</div>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import MainComp from './components/Main'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MainComp
   },
   data () {
     return {

@@ -1,15 +1,11 @@
 <template>
   <div class="access-ctrls-wrapper">
-    <button @click="toggleAccessibilityCtrlsSection" class="m-access-ctrls-btn">
+    <button @click="toggleAccessibilityCtrlsSection" class="m-access-ctrls-btn m16y__btn">
       <div class="m-access-ctrls-btn__content">{{accessBtn}}</div>
       <i class="material-icons">
-        accessibility
+        accessibility_new
       </i>
     </button>
-    <!-- <v-btn :color="accessBtnColor" round @click="toggleAccessibilityCtrlsSection" class="white--text">
-      {{accessBtn}}
-      <v-icon right medium>{{accessBtn}}</v-icon>
-    </v-btn> -->
     <transition name="component-fade" mode="out-in">
       <div class="section-container pa1 d--grid" v-show="this.openAccessControlSection">
         <!-- TODO: turn it to slider -->
@@ -43,7 +39,12 @@
             @change="supportGrayscale"
             v-model="grayscale" class="switcher" id="nightMode-control">
         </div>
-        <button @click="reset" class="m-access-ctrls__reset-btn">Reset</button>
+        <button @click="reset" class="m-access-ctrls__reset-btn m16y__btn">
+          <div class="btn__content">Reset</div>
+          <i class="material-icons">
+            format_color_reset
+          </i>
+        </button>
       </div>
     </transition>
   </div>  
@@ -124,6 +125,29 @@ export default {
   }
 </style>
 <style scoped lang="scss">
+  .m16y__btn {
+    background: #41b883;
+    color: white;
+    display:flex;
+    justify-content: center;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    min-height: 36px;
+    flex: 0 0 auto;
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 88px;
+    outline: 0;
+    text-decoration: none;
+    transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1), color 1ms;
+    position: relative;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
   .access-ctrls-wrapper{
     display: grid;
     justify-items: end;
@@ -134,30 +158,9 @@ export default {
     // background: white; //should only relevant when it's opened.
 
     .m-access-ctrls-btn {
-      background: #00897B;
-      color: white;
-      display:flex;
       padding: 5px 15px;
-      align-items: center;
       border-radius: 30px;
-      justify-content: center;
-      text-transform: uppercase;
-      border: 1px solid transparent;
-      min-height: 36px;
-      flex: 0 0 auto;
-      font-size: 14px;
-      font-weight: 500;
       margin: 6px 8px;
-      min-width: 88px;
-      outline: 0;
-      text-decoration: none;
-      transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1), color 1ms;
-      position: relative;
-      vertical-align: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
 
       .m-access-ctrls-btn__content {
         margin-right: 5px;
@@ -166,28 +169,8 @@ export default {
     }
 
     .m-access-ctrls__reset-btn {
-      background: #00897B;
-      color: white;
-      display:flex;
       padding: 3px 5px;
-      align-items: center;
-      border-radius: 3px;
-      justify-content: center;
-      text-transform: uppercase;
-      border: 1px solid transparent;
-      flex: 0 0 auto;
-      font-size: 14px;
-      font-weight: 500;
       margin: auto;
-      outline: 0;
-      text-decoration: none;
-      transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1), color 1ms;
-      position: relative;
-      vertical-align: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
     }
   }
 
