@@ -22,22 +22,22 @@
             v-model="contrast" class="slider" id="contrast-sensitivity-control">
         </div>
         <div class="switcher-container">
-          <label for="nightMode-control">Dark Mode</label>
+          <label for="nightMode--control">Dark Mode</label>
           <input type="checkbox"
             @change="switchScreenMode"
-            v-model="nightMode" class="switcher" id="nightMode-control">
+            v-model="nightMode" class="switcher" id="nightMode--control">
         </div>
         <div class="switcher-container">
-          <label for="nightMode-control">Color Blind Mode</label>
+          <label for="colorBlind-control">Color Blind Mode</label>
           <input type="checkbox"
             @change="supportColorblind"
-            v-model="colorBlind" class="switcher" id="nightMode-control">
+            v-model="colorBlind" class="switcher" id="colorBlind--control">
         </div>
         <div class="switcher-container">
-          <label for="nightMode-control">Grayscale Mode</label>
+          <label for="grayScale--control">Grayscale Mode</label>
           <input type="checkbox"
             @change="supportGrayscale"
-            v-model="grayscale" class="switcher" id="nightMode-control">
+            v-model="grayscale" class="switcher" id="grayScale--control">
         </div>
         <button @click="reset" class="m-access-ctrls__reset-btn m16y__btn">
           <div class="m-btn__content">Reset</div>
@@ -126,7 +126,7 @@ export default {
 </style>
 <style scoped lang="scss">
   .m16y__btn {
-    background: #41b883;
+    background: #304960;
     color: white;
     display:flex;
     justify-content: center;

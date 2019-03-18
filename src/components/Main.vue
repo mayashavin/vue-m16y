@@ -17,7 +17,7 @@
         How to install
         <v-icon right small>build</v-icon>
       </v-btn>
-      <a class="v-btn v-btn--outline v-btn--depressed theme--light teal--text text--darken-3" href="https://github.com/mayashavin/vue-m16y" target="_blank">
+      <a rel="noreferrer" class="v-btn v-btn--outline v-btn--depressed theme--light teal--text text--darken-3" href="https://github.com/mayashavin/vue-m16y" target="_blank">
         Github
         <font-awesome-icon :icon='gitHub' class="ml-2" style="font-size: 20px"/>
       </a>
@@ -46,7 +46,3 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
     }
   }
 </script>
-
-<style>
-
-</style>
