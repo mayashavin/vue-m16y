@@ -40,7 +40,7 @@
             v-model="grayscale" class="switcher" id="nightMode-control">
         </div>
         <button @click="reset" class="m-access-ctrls__reset-btn m16y__btn">
-          <div class="btn__content">Reset</div>
+          <div class="m-btn__content">Reset</div>
           <i class="material-icons">
             format_color_reset
           </i>
@@ -139,6 +139,7 @@ export default {
     min-width: 88px;
     outline: 0;
     text-decoration: none;
+    align-items: center;
     transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1), color 1ms;
     position: relative;
     vertical-align: middle;
@@ -170,6 +171,7 @@ export default {
 
     .m-access-ctrls__reset-btn {
       padding: 3px 5px;
+      border-radius: 3px;
       margin: auto;
     }
   }
