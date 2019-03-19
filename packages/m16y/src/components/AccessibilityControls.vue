@@ -1,6 +1,6 @@
 <template>
-  <div class="access-ctrls-wrapper">
-    <button @click="toggleAccessibilityCtrlsSection" class="m-access-ctrls-btn m16y__btn">
+  <div class="access-ctrls-wrapper" role="region">
+    <button type="button" @click="toggleAccessibilityCtrlsSection" role="button" class="m-access-ctrls-btn m16y__btn">
       <div class="m-access-ctrls-btn__content">{{accessBtn}}</div>
       <i class="material-icons">
         accessibility_new
@@ -11,7 +11,7 @@
         <!-- TODO: turn it to slider -->
         <div class="slider-container">
           <label for="light-sensitivity-control">{{nightMode ? 'Darkness' : 'Brightness'}}</label>
-          <input type="range" min="1" max="200" 
+          <input type="range" min="1" max="200"
             @change="modifyBrightness"
             v-model="brightness" class="slider" id="light-sensitivity-control">
         </div>
@@ -24,22 +24,25 @@
         <div class="switcher-container">
           <label for="nightMode--control">Dark Mode</label>
           <input type="checkbox"
+            role="checkbox" :aria-checked="nightMode"
             @change="switchScreenMode"
             v-model="nightMode" class="switcher" id="nightMode--control">
         </div>
         <div class="switcher-container">
-          <label for="colorBlind-control">Color Blind Mode</label>
+          <label for="colorBlind--control">Color Blind Mode</label>
           <input type="checkbox"
+            role="checkbox" :aria-checked="colorBlind"
             @change="supportColorblind"
             v-model="colorBlind" class="switcher" id="colorBlind--control">
         </div>
         <div class="switcher-container">
           <label for="grayScale--control">Grayscale Mode</label>
           <input type="checkbox"
+            role="checkbox" :aria-checked="grayscale"
             @change="supportGrayscale"
             v-model="grayscale" class="switcher" id="grayScale--control">
         </div>
-        <button @click="reset" class="m-access-ctrls__reset-btn m16y__btn">
+        <button @click="reset" type="button" class="m-access-ctrls__reset-btn m16y__btn" role="button">
           <div class="m-btn__content">Reset</div>
           <i class="material-icons">
             format_color_reset
