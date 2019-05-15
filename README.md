@@ -46,7 +46,7 @@ Allow user to switch the app to grayscale color theme.
 - Add the plugin to Vue using
 
 ```
-import M16yPlugin from 'm16y-plugin';
+import M16yPlugin from 'vue-accessibility-widget';
 
 Vue.use(M16yPlugin);
 ```
