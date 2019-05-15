@@ -57,7 +57,9 @@ $ yarn add vue-accessibility-widget
 ```
 import M16yPlugin from 'm16y-plugin';
 
-Vue.use(M16yPlugin);
+Vue.use(M16yPlugin, {
+  plugins: { Cloudinary: true } //if you want to use Cloudinary
+});
 ```
 
 - In `App.vue` simple add attribute `v-m16y-ctrls`
@@ -71,6 +73,7 @@ Vue.use(M16yPlugin);
 ```
 Vue.use(M16yPlugin, {
   directiveName: 'v-access-ctrls',
+  plugins: { Cloudinary: true },
 });
 ```
 
