@@ -90,9 +90,6 @@ And in `App.vue`
 
 And it will just work! 👍
 
-### Docs ✍️
-Coming soon
-
 ### Use `image-wrapper`
 
 `image-wrapper` receives the following basic props:
@@ -122,6 +119,9 @@ And of course a bunch of other automation tools and JavaScript, CSS 👩‍💻
 
 ## Version
 0.0.33
+
+## Docs & Roadmap ✍️
+Coming soon
 
 ## Project setup
 ```
