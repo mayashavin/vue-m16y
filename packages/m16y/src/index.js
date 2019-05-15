@@ -95,7 +95,7 @@ const M16yPlugin = {
     root.$on('nightMode', data.switchNightMode);
     root.$on('colorBlind', data.supportColorBlind);
 
-    if (options.plugins.Cloudinary) {
+    if (options.plugins && options.plugins.Cloudinary) {
       Vue.use(Cloudinary, {
         ...options.plugins.Cloudinary,
       });

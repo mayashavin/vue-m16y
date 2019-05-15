@@ -57,8 +57,19 @@ $ yarn add vue-accessibility-widget
 ```
 import M16yPlugin from 'vue-accessibility-widget';
 
+Vue.use(M16yPlugin);
+```
+
+- Use Cloudinary plugins to get all other cool accessibility effect:
+```
+import M16yPlugin from 'vue-accessibility-widget';
+
 Vue.use(M16yPlugin, {
-  plugins: { Cloudinary: true } //if you want to use Cloudinary
+  plugins: { 
+    Cloudinary: {
+      cloudName: <yourCloudName>  //if you want to use Cloudinary
+    }
+  }
 });
 ```
 
@@ -73,7 +84,6 @@ Vue.use(M16yPlugin, {
 ```
 Vue.use(M16yPlugin, {
   directiveName: 'v-access-ctrls',
-  plugins: { Cloudinary: true },
 });
 ```
 
