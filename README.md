@@ -81,10 +81,6 @@ Other transformation effects which follow [Cloudinary standards](https://cloudin
 ## Technologies used
 [Vue](https://vuejs.com)
 
-UI Components currently using [Vuetify](https://vuetifyjs.com) 
-
-![UI Library](https://res.cloudinary.com/mayashavin/image/upload/w_100/v1550136562/vuetify_icon.png)
-
 Image manipulation support for color blind and night mode using [Cloudinary Vue SDK - Beta](https://cloudinary.com)
 
 ![Image manipulation](https://cloudinary-res.cloudinary.com/image/upload/w_250/v1538583988/cloudinary_logo_for_white_bg.png)
