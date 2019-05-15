@@ -1,6 +1,6 @@
 {
   "name": "vue-accessibility-widget",
-  "version": "0.0.32",
+  "version": "0.0.33",
   "description": "M16y - Media Accessibility plugin",
   "author": "Maya Shavin <maya@cloudinary.com>",
   "scripts": {
@@ -108,7 +108,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mayashavin/vue-accessibility-demo.git"
+    "url": "git+https://github.com/mayashavin/vue-m16y.git"
   },
   "keywords": [
     "a11y",
