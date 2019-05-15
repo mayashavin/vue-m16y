@@ -55,7 +55,7 @@ $ yarn add vue-accessibility-widget
 - Add the plugin to Vue using
 
 ```
-import M16yPlugin from 'm16y-plugin';
+import M16yPlugin from 'vue-accessibility-widget';
 
 Vue.use(M16yPlugin, {
   plugins: { Cloudinary: true } //if you want to use Cloudinary
