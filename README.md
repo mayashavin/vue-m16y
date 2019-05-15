@@ -45,13 +45,43 @@ Allow user to switch the app to grayscale color theme.
 ### Install the plugin
 - Add the plugin to Vue using
 
+### Getting started 👩‍💻
+- Add the plugin to Vue using
+
 ```
 import M16yPlugin from 'vue-accessibility-widget';
 
 Vue.use(M16yPlugin);
 ```
 
-- In `App.vue` simple add attribute `v-access-ctrls`
+- Use Cloudinary plugins to get all other cool accessibility effect:
+```
+import M16yPlugin from 'vue-accessibility-widget';
+
+Vue.use(M16yPlugin, {
+  plugins: { 
+    Cloudinary: {
+      cloudName: <yourCloudName>  //if you want to use Cloudinary
+    }
+  }
+});
+```
+
+- In `App.vue` simple add attribute `v-m16y-ctrls`
+```
+<div id="app" v-m16y-ctrls>
+<!--code here--/>
+</div>
+```
+
+**Or you can customize the attribute name by**
+```
+Vue.use(M16yPlugin, {
+  directiveName: 'v-access-ctrls',
+});
+```
+
+And in `App.vue`
 ```
 <div id="app" v-access-ctrls>
 <!--code here--/>
@@ -59,6 +89,9 @@ Vue.use(M16yPlugin);
 ```
 
 And it will just work! 👍
+
+### Docs ✍️
+Coming soon
 
 ### Use `image-wrapper`
 
