@@ -1,4 +1,4 @@
-# vue-m16y
+# vue-accessibility-widget
 Vue plugin for m16y - media accessibility for visually impaired user support.
 
 Demo: [https://vue-accessibility-demo.netlify.com/](https://vue-accessibility-demo.netlify.com/)
