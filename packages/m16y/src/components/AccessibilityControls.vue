@@ -1,6 +1,6 @@
 <template>
   <div class="access-ctrls-wrapper" role="region">
-    <button type="button" @click="toggleAccessibilityCtrlsSection" role="button" class="m-access-ctrls-btn m16y__btn">
+    <button type="button" disabled @click="toggleAccessibilityCtrlsSection" role="button" class="m-access-ctrls-btn m16y__btn">
       <div class="m-access-ctrls-btn__content">{{accessBtn}}</div>
       <i class="material-icons">
         accessibility_new
